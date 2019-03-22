@@ -1,0 +1,16 @@
+<textarea id="text-input" class="form-control" [ngModel]="data" (ngModelChange)="calc($event)" rows="15"
+  placeholder="Insert text here"></textarea>
+<br />
+<div class="jumbotron">
+  <h1 class="display-6">Results:</h1>
+  <hr class="my-3">
+  <label>Words:</label><span> {{ countObj?.words }}</span>
+  <br />
+  <label>Unique words:</label><span> {{ countObj?.unique_words }}</span>
+  <br />
+  <label>Characters:</label><span> {{ countObj?.characters }}</span>
+  <br />
+  <label>Sentences:</label><span> {{ countObj?.sentences }}</span>
+  <br />
+  <label>Readability:</label><span> {{ countObj?.readability }}</span>
+</div>
