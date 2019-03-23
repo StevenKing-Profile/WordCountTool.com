@@ -1,16 +1,45 @@
-<textarea id="text-input" class="form-control" [ngModel]="data" (ngModelChange)="calc($event)" rows="15"
-  placeholder="Insert text here"></textarea>
-<br />
-<div class="jumbotron">
-  <h1 class="display-6">Results:</h1>
-  <hr class="my-3">
-  <label>Words:</label><span> {{ countObj?.words }}</span>
+<div class="col-sm-12">
+  <textarea id="text-input" class="form-control" [ngModel]="data" (ngModelChange)="calc($event)" rows="12"
+      align="center" placeholder="Insert text here"></textarea>
   <br />
-  <label>Unique words:</label><span> {{ countObj?.unique_words }}</span>
-  <br />
-  <label>Characters:</label><span> {{ countObj?.characters }}</span>
-  <br />
-  <label>Sentences:</label><span> {{ countObj?.sentences }}</span>
-  <br />
-  <label>Readability:</label><span> {{ countObj?.readability }}</span>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="jumbotron">
+        <h1 class="display-6">Results:</h1>
+        <hr class="my-3">
+
+        <table class="table table-sm" id="results-table">
+          <tbody>
+            <tr [ngClass]="countObj?.words ? 'table-primary' : ''">
+              <td>Words:</td>
+              <td>{{ countObj?.words }}</td>
+            </tr>
+            <tr>
+              <td>Unique Words:</td>
+              <td>{{ countObj?.unique_words }}</td>
+            </tr>
+            <tr>
+              <td>Characters:</td>
+              <td>{{ countObj?.characters }}</td>
+            </tr>
+            <tr>
+              <td>Sentences:</td>
+              <td>{{ countObj?.sentences }}</td>
+            </tr>
+            <tr>
+              <td>Readability:</td>
+              <td>{{ countObj?.readability | number : '1.1-1' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <ng-adsense></ng-adsense>
+    </div>
+  </div>
 </div>
