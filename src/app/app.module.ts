@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { CountComponent } from './Count/count.component';
 import { CountService } from './Count/count.service';
 import { NavbarComponent } from './Navbar/navbar.component';
+import { FooterComponent } from './Footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     CountComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
