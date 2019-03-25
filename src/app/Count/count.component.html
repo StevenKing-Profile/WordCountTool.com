@@ -1,14 +1,17 @@
-<div class="col-sm-12">
-  <textarea id="text-input" class="form-control" rows="13"
-      [ngModel]="data" 
-      (ngModelChange)="calc($event)" 
-      placeholder="Insert text here"></textarea>
-  <br />
+<br/>
+<div class="container-fluid">
+  <div class="col-xs-12">
+    <textarea id="text-input" class="form-control" rows="13"
+        [ngModel]="data" 
+        (ngModelChange)="calc($event)" 
+        placeholder="Insert text here"></textarea>
+    <br />
+  </div>
 </div>
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-lg-6">
       <div class="jumbotron">
         <h1 class="display-6">Results:</h1>
         <hr class="my-3">
@@ -40,7 +43,7 @@
       </div>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-lg-6">
       <ng-adsense></ng-adsense>
     </div>
   </div>
