@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import * as citation from 'citation-js';
+// import * as citation from 'citation-js';
 
 @Component({
   selector: 'app-mla',

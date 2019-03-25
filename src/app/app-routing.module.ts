@@ -5,9 +5,8 @@ import { MlaComponent } from './mla/mla.component';
 import { CountComponent } from './Count/count.component';
 
 const appRoutes: Routes = [
-    { path: 'count', component: CountComponent },
+    { path: '', component: CountComponent },
     { path: 'mla', component: MlaComponent },
-    { path: '**', redirectTo: '/' }
   ]
 
   @NgModule({
