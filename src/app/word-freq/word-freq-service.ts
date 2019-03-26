@@ -10,7 +10,9 @@ export class WordFrequencyService {
     getWordFrequency(event) : WordFrequency {
         let wordsMap: Map<string, number> = new Map();
 
-        let words = event.split(" ").map(s => s.charAt(0).toUpperCase() + s.substring(1).toLowerCase());
+        let words = event.replace(/\n/g, " ").replace(/[^0-9a-z ]/gi, '')
+                .split(" ")
+                .map(s => s.charAt(0).toUpperCase() + s.substring(1).toLowerCase());
         for (var i = 0; i < words.length; i++) {
             if (words[i] != '') {
                 if (!wordsMap.has(words[i])) {
