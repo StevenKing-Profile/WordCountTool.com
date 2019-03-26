@@ -1,0 +1,20 @@
+<br/>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10">
+      <textarea id="text-input" class="form-control" rows="13" 
+          [ngModel]="data" 
+          (ngModelChange)="calculate($event)" 
+          placeholder="Insert text here"></textarea>
+      <br />
+    </div>
+    <div class="col-md-2">
+      <table>
+          <tr *ngFor="let item of wordFreqObj?.map|getValues">
+            <td>{{ item?.key }}</td>
+            <td>{{ item?.val }}</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+</div>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MlaComponent } from './mla.component';
+import { WordFrequencyComponent } from './word-freq.component';
 
 describe('MlaComponent', () => {
-  let component: MlaComponent;
-  let fixture: ComponentFixture<MlaComponent>;
+  let component: WordFrequencyComponent;
+  let fixture: ComponentFixture<WordFrequencyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MlaComponent ]
+      declarations: [ WordFrequencyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MlaComponent);
+    fixture = TestBed.createComponent(WordFrequencyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

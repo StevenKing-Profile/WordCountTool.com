@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { CountService } from './count.service';
 import { Count } from './count.model';
 

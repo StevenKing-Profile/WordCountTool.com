@@ -7,18 +7,21 @@ import { Router } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CountComponent } from './Count/count.component';
 import { CountService } from './Count/count.service';
-import { MlaComponent } from './mla/mla.component';
+import { WordFrequencyComponent } from './word-freq/word-freq.component';
 import { NavbarComponent } from './Navbar/navbar.component';
 import { FooterComponent } from './Footer/footer.component';
+import { GetValuesPipe } from './get-values.pipe';
+
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent, 
     CountComponent,
-    MlaComponent,
+    WordFrequencyComponent,
     NavbarComponent,
     FooterComponent,
+    GetValuesPipe
   ],
   imports: [
     BrowserModule,

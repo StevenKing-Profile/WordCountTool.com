@@ -1,12 +1,12 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MlaComponent } from './mla/mla.component';
+import { WordFrequencyComponent } from './word-freq/word-freq.component';
 import { CountComponent } from './Count/count.component';
 
 const appRoutes: Routes = [
     { path: '', component: CountComponent },
-    { path: 'mla', component: MlaComponent },
+    { path: 'frequency', component: WordFrequencyComponent },
     { path: '**',  redirectTo: '/' }
   ]
 
