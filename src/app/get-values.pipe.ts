@@ -5,6 +5,9 @@ export class GetValuesPipe implements PipeTransform {
     transform(map: Map<any, any>): any[] {
         let ret = [];
 
+        if (map == null)
+          return null;
+
         map.forEach((val, key) => {
             ret.push({
                 key: key,
