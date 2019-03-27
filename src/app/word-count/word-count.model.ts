@@ -1,4 +1,4 @@
-export class Count {
+export class WordCount {
   words: number;
   unique_words: number;
   characters: number;

@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { WordFrequencyService } from './word-freq-service';
 import { WordFrequency } from './word-freq.model';
 
@@ -10,14 +10,11 @@ import { WordFrequency } from './word-freq.model';
 })
 export class WordFrequencyComponent {
   @Input() wordFreqObj: WordFrequency;
+  title: string = "Word Frequency";
 
-  constructor(private service: WordFrequencyService) { }
+  constructor(private service: WordFrequencyService) {}
 
-  ngOnInit() {
-    console.log(this.wordFreqObj);
-  }
-
-  calculate(event) : void {
+  calculate(event: string) {
     this.wordFreqObj = this.service.getWordFrequency(event);
   }
 }

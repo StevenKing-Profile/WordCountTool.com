@@ -2,10 +2,10 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { WordFrequencyComponent } from './word-freq/word-freq.component';
-import { CountComponent } from './Count/count.component';
+import { WordCountComponent } from './word-count/word-count.component';
 
 const appRoutes: Routes = [
-    { path: '', component: CountComponent },
+    { path: '', component: WordCountComponent },
     { path: 'frequency', component: WordFrequencyComponent },
     { path: '**',  redirectTo: '/' }
   ]

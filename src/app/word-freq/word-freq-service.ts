@@ -7,7 +7,7 @@ import { WordFrequency } from './word-freq.model';
 export class WordFrequencyService {
     wordFreqObj: WordFrequency = new WordFrequency;
 
-    getWordFrequency(event) : WordFrequency {
+    getWordFrequency(event): WordFrequency {
         let wordsMap: Map<string, number> = new Map();
 
         let words = event.replace(/\n/g, " ").replace(/[^0-9a-z ]/gi, '')

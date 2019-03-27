@@ -5,23 +5,23 @@ import { AdsenseModule } from 'ng2-adsense';
 import { Router } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CountComponent } from './Count/count.component';
-import { CountService } from './Count/count.service';
+import { WordCountComponent } from './word-count/word-count.component';
+import { WordCountService } from './word-count/word-count.service';
 import { WordFrequencyComponent } from './word-freq/word-freq.component';
-import { NavbarComponent } from './Navbar/navbar.component';
-import { FooterComponent } from './Footer/footer.component';
+import { FooterComponent } from './footer/footer.component';
 import { GetValuesPipe } from './get-values.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
+import { InputboxComponent } from './inputbox/inputbox.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    CountComponent,
+    WordCountComponent,
     WordFrequencyComponent,
-    NavbarComponent,
     FooterComponent,
-    GetValuesPipe
+    GetValuesPipe,
+    InputboxComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
   ],
   providers: [
-    CountService
+    WordCountService
   ],
   bootstrap: [AppComponent]
 })

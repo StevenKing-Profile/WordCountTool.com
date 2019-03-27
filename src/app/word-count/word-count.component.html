@@ -1,13 +1,6 @@
-<br/>
-<div class="container-fluid">
-  <div class="col-xs-12">
-    <textarea id="text-input" class="form-control" rows="13"
-        [ngModel]="data" 
-        (ngModelChange)="calc($event)" 
-        placeholder="Insert text here"></textarea>
-    <br />
-  </div>
-</div>
+<h2 class="text-center">{{ title }}</h2>
+
+<inputbox (userInput)=calculate($event)></inputbox>
 
 <div class="container-fluid">
   <div class="row">
@@ -18,25 +11,25 @@
 
         <table class="table table-sm" id="results-table">
           <tbody>
-            <tr [ngClass]="countObj?.words ? 'table-primary' : ''">
+            <tr [ngClass]="wordCount?.words ? 'table-primary' : ''">
               <td>Words:</td>
-              <td>{{ countObj?.words }}</td>
+              <td>{{ wordCount?.words }}</td>
             </tr>
             <tr>
               <td>Unique Words:</td>
-              <td>{{ countObj?.unique_words }}</td>
+              <td>{{ wordCount?.unique_words }}</td>
             </tr>
             <tr>
               <td>Characters:</td>
-              <td>{{ countObj?.characters }}</td>
+              <td>{{ wordCount?.characters }}</td>
             </tr>
             <tr>
               <td>Sentences:</td>
-              <td>{{ countObj?.sentences }}</td>
+              <td>{{ wordCount?.sentences }}</td>
             </tr>
             <tr>
               <td>Readability:</td>
-              <td>{{ countObj?.readability | number : '1.1-1' }}</td>
+              <td>{{ wordCount?.readability | number : '1.1-1' }}</td>
             </tr>
           </tbody>
         </table>
