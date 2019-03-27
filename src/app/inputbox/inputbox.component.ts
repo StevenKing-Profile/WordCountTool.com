@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { InputboxService } from './inputbox.service';
 
 @Component({
   selector: 'inputbox',
@@ -6,10 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./inputbox.component.css']
 })
 export class InputboxComponent {
-  data: string
-  @Output() userInput: EventEmitter<string> = new EventEmitter<string>();
 
+  constructor(private service: InputboxService) {}
+  
   calculate(event) : void {
-    this.userInput.emit(event);
+    this.service.setData(event);
   }
 }
