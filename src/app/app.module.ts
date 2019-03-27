@@ -1,3 +1,7 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,8 +26,11 @@ import { WordFrequencyComponent } from './word-freq/word-freq.component';
     GetValuesPipe,
     InputboxComponent
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+    CommonModule,
+    NgtUniversalModule,
+    TransferHttpCacheModule,
+    HttpClientModule,
     FormsModule,
     AdsenseModule.forRoot({adClient: 'ca-pub-7640562161899788', adSlot: 7259870550,}),
     AppRoutingModule,
@@ -31,7 +38,6 @@ import { WordFrequencyComponent } from './word-freq/word-freq.component';
   providers: [
     InputboxService
   ],
-  bootstrap: [AppComponent]
 })
 export class AppModule { 
   constructor (router: Router) {}
