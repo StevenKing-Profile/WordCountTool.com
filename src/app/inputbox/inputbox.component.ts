@@ -7,6 +7,7 @@ import { InputboxService } from './inputbox.service';
   styleUrls: ['./inputbox.component.css']
 })
 export class InputboxComponent {
+  data: string;
 
   constructor(private service: InputboxService) {}
   
