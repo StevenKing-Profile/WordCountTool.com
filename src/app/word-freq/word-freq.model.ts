@@ -1,5 +1,5 @@
 export class WordFrequency {
-    map: Map<String, number> = new Map();
+  map: Map<String, number> = new Map();
     
-    constructor() {}
-  }
+  constructor() {}
+}

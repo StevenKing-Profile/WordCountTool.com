@@ -18,7 +18,7 @@ export class WordFrequencyComponent {
 
   ngOnInit() : void {
     this.inputService.getData().subscribe((data => {
-        this.wordFrequency = this.service.getWordFrequency(data);
+      this.wordFrequency = this.service.getWordFrequency(data);
     }));
   }
 }

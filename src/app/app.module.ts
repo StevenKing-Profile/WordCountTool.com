@@ -42,5 +42,6 @@ import { WordFrequencyComponent } from './word-freq/word-freq.component';
   ],
 })
 export class AppModule { 
+  
   constructor (router: Router) {}
 }

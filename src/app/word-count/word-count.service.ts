@@ -20,7 +20,7 @@ export class WordCountService {
 
   getSentences(event) {
     let re = /\b(\w\.\w\.)|([.?!])\s+(?=[A-Za-z])/g; 
-    var result = event.replace(re, function(m, g1, g2){
+    var result = event.replace(re, function(m, g1, g2) {
       return g1 ? g1 : g2+"\r";
     });
     return result ? (result.split("\r") || []).length : 0;
