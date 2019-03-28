@@ -17,12 +17,14 @@ import { InputboxComponent } from './inputbox/inputbox.component';
 import { InputboxService } from './inputbox/inputbox.service';
 import { WordCountComponent } from './word-count/word-count.component';
 import { WordFrequencyComponent } from './word-freq/word-freq.component';
+import { WordManipulationComponent } from './word-manipulation/word-manipulation.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     WordCountComponent,
     WordFrequencyComponent,
+    WordManipulationComponent,
     FooterComponent,
     GetValuesPipe,
     InputboxComponent,

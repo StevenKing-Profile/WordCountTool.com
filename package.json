@@ -39,6 +39,7 @@
     "ng2-adsense": "^5.4.1",
     "ng2-charts": "^2.2.0",
     "rxjs": "6.0.0",
+    "spongemock": "0.0.8",
     "ts-loader": "4.2.0",
     "webpack-cli": "^3.1.2",
     "zone.js": "^0.8.26"
