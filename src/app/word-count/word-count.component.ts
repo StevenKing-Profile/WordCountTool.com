@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { InputboxService } from '../inputbox/inputbox.service';
 import { WordCountService } from './word-count.service';
 import { WordCount } from './word-count.model';
+import { InputboxComponent } from '../inputbox/inputbox.component';
 
 @Component({
   selector: 'word-count',
