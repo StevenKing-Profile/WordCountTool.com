@@ -32,8 +32,16 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-lg-6">
-      <ng-adsense></ng-adsense>
+    <div class="col-xs-12 col-lg-4">
+      <!-- <ng-adsense></ng-adsense> -->
+      <br/>
+      <div class="center" id="chart-div" style="display: block">
+        <canvas baseChart
+            [data]="piechartData"
+            [labels]="piechartLabels"
+            [chartType]="type"></canvas>
+      </div>
     </div>
+
   </div>
 </div>

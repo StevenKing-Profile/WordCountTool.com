@@ -25,4 +25,11 @@ export class WordCountService {
     });
     return result ? (result.split("\r") || []).length : 0;
   }
+
+  getPiechartData() {
+    if (this.wordCount.characters < 280)
+      return [this.wordCount.characters, 280-this.wordCount.characters];
+    else
+      return [280, 0];
+  }
 }

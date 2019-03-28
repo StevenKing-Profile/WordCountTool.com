@@ -10,8 +10,12 @@ import { InputboxService } from '../inputbox/inputbox.service';
   providers: [WordCountService]
 })
 export class WordCountComponent {
-  @Input() wordCount: WordCount;
   title: string = "Word Counter";
+  @Input() wordCount: WordCount;
+  
+  type = 'doughnut';
+  piechartLabels = ['Characters Remaining', 'Max Characters (280)'];
+  piechartData: number[];
 
   constructor(private service: WordCountService, 
       private inputService: InputboxService) {}
@@ -19,6 +23,7 @@ export class WordCountComponent {
   ngOnInit() : void {
     this.inputService.getData().subscribe((data => {
       this.wordCount = this.service.getCount(data);
+      this.piechartData = this.service.getPiechartData();
     }));
   }
 }

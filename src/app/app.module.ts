@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Router, RouterModule } from '@angular/router';
 import { AdsenseModule } from 'ng2-adsense';
 import { AppRoutingModule } from './app-routing.module';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,7 +25,7 @@ import { WordFrequencyComponent } from './word-freq/word-freq.component';
     WordFrequencyComponent,
     FooterComponent,
     GetValuesPipe,
-    InputboxComponent
+    InputboxComponent,
   ],
   imports:[
     CommonModule,
@@ -34,6 +35,7 @@ import { WordFrequencyComponent } from './word-freq/word-freq.component';
     FormsModule,
     AdsenseModule.forRoot({adClient: 'ca-pub-7640562161899788', adSlot: 7259870550,}),
     AppRoutingModule,
+    ChartsModule
   ],
   providers: [
     InputboxService
