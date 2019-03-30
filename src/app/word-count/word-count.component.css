@@ -3,13 +3,13 @@ tr td {
 }
 
 #chart-div {
-  background: transparent url("src/assets/Twitter_Logo_Blue.png") no-repeat center 60%;
+  background: transparent url("/assets/Twitter_Logo_Blue.png") no-repeat center 60%;
   background-size: 25% 40%;
 }
 
 @media screen and (max-width: 700px) {
   #chart-div {
-    background: transparent url("src/assets/Twitter_Logo_Blue.png") no-repeat center 69%;
+    background: transparent url("/assets/Twitter_Logo_Blue.png") no-repeat center 69%;
     background-size: 20% 35%;
   }
 }
