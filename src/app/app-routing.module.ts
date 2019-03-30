@@ -1,12 +1,17 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MlaComponent } from './mla/mla.component';
-import { CountComponent } from './Count/count.component';
+import { WordFrequencyComponent } from './word-freq/word-freq.component';
+import { WordCountComponent } from './word-count/word-count.component';
+import { WordManipulationComponent } from './word-manipulation/word-manipulation.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { InputboxComponent } from './inputbox/inputbox.component';
 
 const appRoutes: Routes = [
-    { path: '', component: CountComponent },
-    { path: 'mla', component: MlaComponent },
+    { path: '', component: InputboxComponent, children: [{ path: '', component: WordCountComponent }] },
+    { path: 'frequency', component: InputboxComponent, children: [{ path: '', component: WordFrequencyComponent }] },
+    { path: 'manipulation', component: InputboxComponent, children: [{ path: '', component: WordManipulationComponent }] },
+    { path: 'privacy', component: PrivacyPolicyComponent },
     { path: '**',  redirectTo: '/' }
   ]
 

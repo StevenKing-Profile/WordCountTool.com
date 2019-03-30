@@ -1,0 +1,12 @@
+button {
+  margin: 20px;
+  padding: 10px;
+}
+
+span {
+  font-size: 20px;
+}
+
+.jumbotron {
+  min-height: 400px;
+}

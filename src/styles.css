@@ -1,1 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+table {
+    word-break: break-all;
+}
+
+.jumbotron {
+    background-color: #F3EFEC !important;
+  }

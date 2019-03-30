@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="col-xs-12">
+    <div class="jumbotron">
+      <h1 class="display-6">Results:</h1>
+      <hr class="my-3">
+      <table class="table table-sm">
+        <tr *ngFor="let entry of wordFrequency?.map|getValues">
+          <td>{{ entry?.key }}</td>
+          <td>{{ entry?.val }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

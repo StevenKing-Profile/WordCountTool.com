@@ -1,0 +1,16 @@
+<div class="col-xs-12">
+  <div style="text-align: center">
+    <button type="button" class="btn btn-primary"
+        (click)="getUpperCase()">UpperCase</button>
+    <button type="button" class="btn btn-success"
+        (click)="getLowerCase()" >LowerCase</button>
+    <button type="button" class="btn btn-warning"
+        (click)="getSpongeMockCase()">SpongeCase</button>
+  </div>
+
+  <div class="jumbotron">
+    <h1 class="display-6">Results:</h1>
+    <hr class="my-3">
+    <span> {{ manipulatedText }} </span>      
+  </div>
+</div>
