@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { GetValuesPipe } from './get-values.pipe';
 import { InputboxComponent } from './inputbox/inputbox.component';
 import { InputboxService } from './inputbox/inputbox.service';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { WordCountComponent } from './word-count/word-count.component';
 import { WordFrequencyComponent } from './word-freq/word-freq.component';
 import { WordManipulationComponent } from './word-manipulation/word-manipulation.component';
@@ -28,6 +29,7 @@ import { WordManipulationComponent } from './word-manipulation/word-manipulation
     FooterComponent,
     GetValuesPipe,
     InputboxComponent,
+    PrivacyPolicyComponent
   ],
   imports:[
     CommonModule,
@@ -42,6 +44,9 @@ import { WordManipulationComponent } from './word-manipulation/word-manipulation
   providers: [
     InputboxService
   ],
+  exports: [
+    InputboxComponent
+  ]
 })
 export class AppModule { 
   

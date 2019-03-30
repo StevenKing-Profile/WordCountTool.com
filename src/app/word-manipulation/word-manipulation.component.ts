@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { InputboxService } from '../inputbox/inputbox.service';
 import { WordManipulationService } from './word-manipulation.service';
