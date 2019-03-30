@@ -1,4 +1,12 @@
-tr td {
+table {
+  word-break: break-word
+}
+
+#word-length-table {
+  font-size: 12px;
+}
+
+#results-table {
   font-size: 20px;
 }
 

@@ -1,6 +1,7 @@
 button {
   margin: 20px;
   padding: 10px;
+  display: block;
 }
 
 span {
@@ -10,3 +11,4 @@ span {
 .jumbotron {
   min-height: 400px;
 }
+

@@ -9,7 +9,6 @@ export class InputboxService {
   dataVanilla: string;
 
   setData(input) : void {
-    console.log("test");
     this.data.next(input);
     this.dataVanilla = input;
   }

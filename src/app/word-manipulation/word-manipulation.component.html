@@ -1,16 +1,22 @@
-<div class="col-xs-12">
-  <div style="text-align: center">
-    <button type="button" class="btn btn-primary"
-        (click)="getUpperCase()">UpperCase</button>
-    <button type="button" class="btn btn-success"
-        (click)="getLowerCase()" >LowerCase</button>
-    <button type="button" class="btn btn-warning"
-        (click)="getSpongeMockCase()">SpongeCase</button>
+<div class="row">
+  <div class="col-md-2">
+    <div style="text-align: center">
+      <button type="button" class="btn btn-primary"
+          (click)="getUpperCase()">UpperCase</button>
+      <br />
+      <button type="button" class="btn btn-success"
+          (click)="getLowerCase()" >LowerCase</button>
+      <br />
+      <button type="button" class="btn btn-warning"
+          (click)="getSpongeMockCase()">SpongeCase</button>
+    </div>
   </div>
 
-  <div class="jumbotron">
-    <h1 class="display-6">Results:</h1>
-    <hr class="my-3">
-    <span> {{ manipulatedText }} </span>      
+  <div class="col-md-10">
+    <div class="jumbotron large-jumbotron">
+      <h1 class="display-6">Results:</h1>
+      <hr class="my-3">
+      <span> {{ manipulatedText }} </span>      
+    </div>
   </div>
 </div>

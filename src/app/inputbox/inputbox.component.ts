@@ -1,10 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { InputboxService } from './inputbox.service';
+import $ from 'jquery';
+
 
 @Component({
   selector: 'inputbox',
   templateUrl: './inputbox.component.html',
-  styleUrls: ['./inputbox.component.css']
+  styleUrls: ['./inputbox.component.css'],
 })
 export class InputboxComponent implements OnInit {
   @Input() data: string;
@@ -18,5 +20,12 @@ export class InputboxComponent implements OnInit {
 
   ngOnInit() {
     this.data = this.service.getDataVanilla();
+
+    var textarea = $('#text-input'),
+    top = textarea.scrollTop(),
+    height = textarea.height();
+    if(top > 0){
+       textarea.css("height",top + height)
+    }
   }
 }

@@ -7,3 +7,7 @@ table {
 .jumbotron {
     background-color: #F3EFEC !important;
   }
+
+.large-jumbotron {
+    min-height: 814px !important;
+}
