@@ -25,7 +25,8 @@
             </tr>
             <tr>
               <td>Readability:</td>
-              <td>{{ wordCount?.readability | number : '1.1-1' }}</td>
+              <td *ngIf="wordCount.readability == null">-</td>
+              <td *ngIf="wordCount?.readability != null">{{ wordCount?.readability }}</td>
             </tr>
           </tbody>
         </table>
