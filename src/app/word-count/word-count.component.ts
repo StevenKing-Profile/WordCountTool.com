@@ -3,13 +3,13 @@ import { Component, Input } from '@angular/core';
 import { InputboxService } from '../inputbox/inputbox.service';
 import { WordCountService } from './word-count.service';
 import { WordCount } from './word-count.model';
-import { InputboxComponent } from '../inputbox/inputbox.component';
+import { NumberSuffixPipe } from './number-suffix.pipe';
 
 @Component({
   selector: 'word-count',
   templateUrl: './word-count.component.html',
   styleUrls: ['./word-count.component.css'],
-  providers: [WordCountService]
+  providers: [WordCountService, NumberSuffixPipe]
 })
 export class WordCountComponent {
   title: string = "Word Counter";

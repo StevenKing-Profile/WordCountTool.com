@@ -3,7 +3,7 @@ export class WordCount {
   unique_words: number;
   characters: number = 0;
   sentences: number;
-  readability: number;
+  readability: string;
   
   constructor(){}
 }
