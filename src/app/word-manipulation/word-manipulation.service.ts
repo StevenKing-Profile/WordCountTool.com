@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { spongeMock } from 'spongeMock';
+import { spongeMock } from 'spongemock';
 
 @Injectable({
   providedIn: 'root'
