@@ -13,7 +13,6 @@ import { AppMaterialModule } from './app-material.module';
 import { FlexModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
 import { BlogComponent } from './blog/blog.component';
 import { InputboxComponent } from './inputbox/inputbox.component';
 import { InputboxService } from './inputbox/inputbox.service';
@@ -21,6 +20,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { WordCountComponent } from './word-count/word-count.component';
 import { WordFrequencyComponent } from './word-freq/word-freq.component';
 import { WordManipulationComponent } from './word-manipulation/word-manipulation.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { GetValuesPipe } from './get-values.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
