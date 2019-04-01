@@ -1,3 +1,45 @@
 .jumbotron {
   min-height: 420px;
 }
+
+table.tableSection {
+  display: table;
+  width: 100%;
+}
+
+table.tableSection thead,
+table.tableSection tbody {
+  width: 100%;
+}
+
+table.tableSection thead {
+  overflow-y: scroll;
+  display: table;
+  table-layout: fixed;
+  width: calc(100% - 16px); /* assuming scrollbar width as 16px */
+}
+
+table.tableSection tbody {
+  overflow: auto;
+  height: 600px;
+  display: block;
+}
+
+table.tableSection tr {
+  width: 100%;
+  text-align: left;
+  display: table;
+  table-layout: fixed;
+}
+
+td {
+  padding: 1px;
+}
+
+.large-column {
+  width: 80%;
+}
+
+.small-column {
+  width: 20%;
+}

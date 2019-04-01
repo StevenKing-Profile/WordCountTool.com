@@ -22,9 +22,20 @@ export class WordFrequencyService {
       }
     }
 
+    let pieChartKey = [];
+    let pieChartValue = [];
+    Array.from(wordsMap.keys()).forEach(function (key) {
+      if (wordsMap.get(key) > 1) {
+        pieChartKey.push(key);
+        pieChartValue.push(wordsMap.get(key));
+      }
+    })
+
     this.wordFreqObj.map = wordsMap;
     this.wordFreqObj.usedOnce = Array.from(wordsMap.values()).filter(x => x === 1).length;
-      
+    this.wordFreqObj.pieChartKey = pieChartKey;
+    this.wordFreqObj.pieChartValue = pieChartValue;
+    
     return this.wordFreqObj;
   }
 }
