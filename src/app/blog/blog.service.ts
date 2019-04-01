@@ -10,7 +10,7 @@ export class BlogService {
   constructor(private http: HttpClient) { }
 
   getPosts(): Observable<any[]> {
-    return this.http.get<any[]>('http://www.oxygenna.com/wp-json/wp/v2/posts?_embed', {
+    return this.http.get<any[]>('http://blog.wordcounttool.com/wp-json/wp/v2/posts?_embed', {
       params: {
         per_page: '6'
       }
