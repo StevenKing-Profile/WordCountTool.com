@@ -43,7 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TransferHttpCacheModule,
     HttpClientModule,
     FormsModule,
-    AdsenseModule.forRoot({adClient: 'ca-pub-7640562161899788', adSlot: 7259870550,}),
+    AdsenseModule.forRoot({adClient: 'ca-pub-8270924858996787', adSlot: 2947619746,}),
     AppRoutingModule,
     ChartsModule,
     BrowserModule,
