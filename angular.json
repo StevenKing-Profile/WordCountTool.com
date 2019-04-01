@@ -21,7 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "ads.txt"
+              "src/ads.txt"
             ],
             "styles": [
               "src/styles.css",
