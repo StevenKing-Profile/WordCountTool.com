@@ -5,9 +5,11 @@
       <hr class="my-3">
       <table class="table table-sm">
         <tr *ngFor="let entry of wordFrequency?.map|getValues">
-          <td>{{ entry?.key }}</td>
-          <td>{{ entry?.val }}</td>
+          <td *ngIf="entry.val > 1">{{ entry?.key }}</td>
+          <td *ngIf="entry.val > 1">{{ entry?.val }}</td>
         </tr>
+        <td>Words Used One Time:</td>
+        <td>{{ wordFrequency.usedOnce }}</td>
       </table>
     </div>
   </div>

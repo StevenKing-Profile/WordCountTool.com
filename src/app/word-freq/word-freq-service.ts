@@ -23,6 +23,8 @@ export class WordFrequencyService {
     }
 
     this.wordFreqObj.map = wordsMap;
+    this.wordFreqObj.usedOnce = Array.from(wordsMap.values()).filter(x => x === 1).length;
+      
     return this.wordFreqObj;
   }
 }
