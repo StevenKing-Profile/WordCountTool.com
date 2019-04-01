@@ -1,7 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 table {
-    word-break: break-all;
+    word-break: break-word;
     table-layout: fixed ;
     width: 100% ;
 }
@@ -16,4 +16,8 @@ td {
 
 .large-jumbotron {
     min-height: 814px !important;
+}
+
+textarea {
+  overflow: scroll !important;
 }
