@@ -8,10 +8,46 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { InputboxComponent } from './inputbox/inputbox.component';
 
 const appRoutes: Routes = [
-    { path: '', component: InputboxComponent, children: [{ path: '', component: WordCountComponent }] },
-    { path: 'frequency', component: InputboxComponent, children: [{ path: '', component: WordFrequencyComponent }] },
-    { path: 'manipulation', component: InputboxComponent, children: [{ path: '', component: WordManipulationComponent }] },
-    { path: 'privacy', component: PrivacyPolicyComponent },
+    { 
+      path: '', 
+      component: InputboxComponent, children: [{ path: '', component: WordCountComponent }],
+      data: {
+        title: 'Word Counter',
+        description: 'Counts the total number of words in text and input',
+        author: 'Steven King',
+        keywords: 'Word, Words, Number, Twitter 280 character limit, Counter, Count, Sentences, Tool'
+      }
+    },
+    { 
+      path: 'frequency', 
+      component: InputboxComponent, children: [{ path: '', component: WordFrequencyComponent }],
+      data: {
+        title: 'Word Frequency',
+        description: 'Counts the number of times a specific word occurs in text and input',
+        author: 'Steven King',
+        keywords: 'Word, Words, Number, Frequency, Amount, How many, Sentences, Tool'
+      }
+    },
+    { 
+      path: 'manipulation', 
+      component: InputboxComponent, children: [{ path: '', component: WordManipulationComponent }],
+      data: {
+        title: 'Word Manipulation',
+        description: 'A tool that changes words and input to uppercase, lowercase, and spongecase',
+        author: 'Steven King',
+        keywords: 'Word, Words, Manipulation, Change, Capital, Uppercase, Lowercase, Tool'
+      }
+    },
+    { 
+      path: 'privacy', 
+      component: PrivacyPolicyComponent,
+      data: {
+        title: 'Privacy Policy',
+        description: 'Information regarding our policies for collection, use, and disclosure of personal data',
+        author: 'Riley Kitchen',
+        keywords: 'Privacy policy, Information, Data, Legal'
+      } 
+    },
     { path: '**',  redirectTo: '/' }
   ]
 

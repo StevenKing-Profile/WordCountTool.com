@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { SeoService } from './seo-service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class AppComponent {
   title = "Word Count Tool"
+
+  public constructor(private seoService: SeoService) {
+    this.seoService.updateTitle();
+  }
 }

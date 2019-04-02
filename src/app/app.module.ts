@@ -20,6 +20,7 @@ import { WordManipulationComponent } from './word-manipulation/word-manipulation
 import { GetValuesPipe } from './get-values.pipe';
 import { NumberSuffixPipe } from './word-count/number-suffix.pipe'
 import { FooterComponent } from './footer/footer.component';
+import { SeoService } from './seo-service'
 
 @NgModule({
   declarations: [
@@ -41,10 +42,12 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     AdsenseModule.forRoot({adClient: 'ca-pub-8270924858996787', adSlot: 2947619746,}),
     AppRoutingModule,
+    BrowserModule,
     ChartsModule
   ],
   providers: [
-    InputboxService
+    InputboxService,
+    SeoService
   ],
   exports: [
     InputboxComponent
