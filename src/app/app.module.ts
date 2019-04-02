@@ -18,6 +18,7 @@ import { WordCountComponent } from './word-count/word-count.component';
 import { WordFrequencyComponent } from './word-freq/word-freq.component';
 import { WordManipulationComponent } from './word-manipulation/word-manipulation.component';
 import { GetValuesPipe } from './get-values.pipe';
+import { NumberSuffixPipe } from './word-count/number-suffix.pipe'
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     WordManipulationComponent,
     FooterComponent,
     GetValuesPipe,
+    NumberSuffixPipe,
     InputboxComponent,
     PrivacyPolicyComponent
   ],

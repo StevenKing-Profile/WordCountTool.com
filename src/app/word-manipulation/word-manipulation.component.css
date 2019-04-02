@@ -12,3 +12,15 @@ span {
   min-height: 400px;
 }
 
+@media screen and (min-width: 1025px) {
+  #btns-grandparent-div {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  #btns-parent-div {
+    position: relative;
+    text-align: center;
+  }
+}

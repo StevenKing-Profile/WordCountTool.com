@@ -19,5 +19,5 @@ td {
 }
 
 textarea {
-  overflow: scroll !important;
+  overflow: visible !important;
 }
