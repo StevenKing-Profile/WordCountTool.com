@@ -1,17 +1,21 @@
-<ng-adsense
-  [adSlot]="2720033819"
-  [display]="'inline-block'">
-</ng-adsense>
-
 <div class="row">
-  <div class="col-md-5 col-lg-4 col-xl-3" id="btns-grandparent-div">
-    <div id="btns-parent-div">
-      <button type="button" class="btn btn-primary"
-          (click)="getUpperCase()">UpperCase</button>
-      <button type="button" class="btn btn-success"
-          (click)="getLowerCase()" >LowerCase</button>
-      <button type="button" class="btn btn-warning"
-          (click)="getSpongeMockCase()">SpongeCase</button>
+  <div class="col-md-5 col-lg-4 col-xl-3">
+    <div class="row">
+      <div id="btns-grandparent-div">
+        <div id="btns-parent-div">
+          <button type="button" class="btn btn-primary"
+              (click)="getUpperCase()">UpperCase</button>
+          <button type="button" class="btn btn-success"
+              (click)="getLowerCase()" >LowerCase</button>
+          <button type="button" class="btn btn-warning"
+              (click)="getSpongeMockCase()">SpongeCase</button>
+        </div>
+      </div>
+      
+      <ng-adsense
+          [adSlot]="2720033819"
+          [display]="'inline-block'">
+      </ng-adsense>
     </div>
   </div>
 
