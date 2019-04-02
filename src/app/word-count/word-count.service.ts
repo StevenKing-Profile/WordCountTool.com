@@ -17,6 +17,7 @@ export class WordCountService {
   getCount(event): WordCount {
     this.wordCount.words = event ? (event.replace(/['";:,.?¿\-!¡]+/g, "").match(/\S+/g) || []).length : 0;
     this.wordCount.characters = event.length;
+    this.wordCount.characters_p_word = this.wordCount.characters / this.wordCount.words;
     this.wordCount.sentences = this.getSentences(event);
     this.wordCount.readability = this.getReadability(event);
     this.wordCount.unique_words = new Set(event.toLowerCase().match(/\w+/g)).size;
