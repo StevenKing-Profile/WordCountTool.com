@@ -11,7 +11,7 @@ table {
   }
 
 .large-jumbotron {
-    min-height: 814px !important;
+    height: 814px !important;
 }
 
 textarea {

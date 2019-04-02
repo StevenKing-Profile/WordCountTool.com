@@ -12,6 +12,11 @@ span {
   min-height: 400px;
 }
 
+.jumbotron-text-parent-div {
+  overflow-y: auto; 
+  height: 650px;
+}
+
 @media screen and (min-width: 1025px) {
   #btns-grandparent-div {
     -webkit-transform-style: preserve-3d;
