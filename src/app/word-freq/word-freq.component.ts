@@ -1,9 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ChartType, ChartOptions } from 'chart.js';
-
-import { WordFrequency } from './word-freq.model';
-import { WordFrequencyService } from './word-freq-service';
+import { Component, Input } from '@angular/core';
 import { InputboxService } from '../inputbox/inputbox.service';
+import { WordFrequencyService } from './word-freq-service';
+import { WordFrequency } from './word-freq.model';
 
 @Component({
   selector: 'word-frequency',

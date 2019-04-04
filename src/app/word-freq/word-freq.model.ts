@@ -4,6 +4,5 @@ export class WordFrequency {
   pieChartKey: any;
   pieChartValue: any;
 
-    
   constructor() {}
 }

@@ -1,10 +1,8 @@
-import { HttpClientModule, HttpClient } from '@angular/common/http'; 
-import { HttpModule } from '@angular/http';
-
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { WordCount } from './word-count.model';
 import * as colemanLiau from 'coleman-liau';
 import { NumberSuffixPipe } from './number-suffix.pipe';
+import { WordCount } from './word-count.model';
 
 @Injectable({
   providedIn: 'root'
