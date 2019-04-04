@@ -53,5 +53,6 @@ export const routes: Routes = [
       description: 'Information regarding our policies for collection, use, and disclosure of personal data',
       'og:title': 'Privacy Policy',
     } 
-  }
+  },
+  { path: '**',  redirectTo: '/' }
 ];
