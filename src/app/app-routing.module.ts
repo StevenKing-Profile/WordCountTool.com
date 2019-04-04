@@ -54,5 +54,4 @@ export const routes: Routes = [
       'og:title': 'Privacy Policy',
     } 
   },
-  { path: '**',  redirectTo: '/' }
 ];
