@@ -37,7 +37,7 @@
       </div>
     </div>
     <br />
-    <div class="center" id="chart-div" style="display: block">
+    <div class="center" id="chart-div" style="display: block" *ngIf="isBrowser">
       <canvas baseChart [data]="piechartData" [labels]="piechartLabels" [chartType]="type"></canvas>
     </div>
   </div>
