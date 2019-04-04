@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = "Word Count Tool";
   metaService: any;
 
-  constructor(private router: Router, private _metaService: MetaService) {}
+  constructor(private router: Router, private _metaService: MetaService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

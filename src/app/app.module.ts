@@ -20,7 +20,7 @@ import { GetValuesPipe } from './get-values.pipe';
 import { NumberSuffixPipe } from './word-count/number-suffix.pipe'
 import { FooterComponent } from './footer/footer.component';
 import { MetaModule } from 'ng2-meta';
-import { routes } from './app-routing.module';
+import { routes, AppRoutingModule } from './app-routing.module';
 import { MetaConfig, MetaService } from 'ng2-meta';
 
 const metaConfig: MetaConfig = {
@@ -35,7 +35,7 @@ const metaConfig: MetaConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
     WordCountComponent,
     WordFrequencyComponent,
     WordManipulationComponent,
@@ -43,7 +43,7 @@ const metaConfig: MetaConfig = {
     GetValuesPipe,
     NumberSuffixPipe,
     InputboxComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
   ],
   imports:[
     CommonModule,
@@ -55,7 +55,8 @@ const metaConfig: MetaConfig = {
     BrowserModule,
     ChartsModule,
     RouterModule.forRoot(routes),
-    MetaModule.forRoot(metaConfig)
+    MetaModule.forRoot(metaConfig),
+    AppRoutingModule
   ],
   providers: [
     InputboxService,

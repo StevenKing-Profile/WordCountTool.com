@@ -6,6 +6,8 @@ import { WordCountComponent } from './word-count/word-count.component';
 import { WordManipulationComponent } from './word-manipulation/word-manipulation.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { InputboxComponent } from './inputbox/inputbox.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 export const routes: Routes = [
   { 
@@ -54,4 +56,17 @@ export const routes: Routes = [
       'og:title': 'Privacy Policy',
     } 
   },
+  { path: '**',  redirectTo: '/' }
 ];
+@NgModule({
+  imports: [
+    RouterModule.forRoot(
+      routes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AppRoutingModule { }
