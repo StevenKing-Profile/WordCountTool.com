@@ -9,3 +9,7 @@
 section {
   margin: auto;
 }
+
+span {
+  white-space:nowrap !important;
+}
