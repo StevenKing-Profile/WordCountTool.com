@@ -26,7 +26,7 @@ import { MetaConfig, MetaService } from 'ng2-meta';
 const metaConfig: MetaConfig = {
   useTitleSuffix: true,   //Append a title suffix such as a site name to all titles
   defaults: {
-    title: 'Word Count Tool',
+    title: 'Word Counter',
     titleSuffix: ' | Word Count Tool',
     description: 'Word Count Tool offers a word counter and more to help you write.',
     'og:description': 'Word Count Tool offers a word counter and more to help you write',
