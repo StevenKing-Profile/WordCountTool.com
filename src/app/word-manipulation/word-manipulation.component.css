@@ -22,6 +22,7 @@ span {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    margin-top: 200px;
   }
 
   #btns-parent-div {

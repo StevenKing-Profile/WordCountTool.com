@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject, PLATFORM_ID } from '@angular/core';
 
 import { InputboxService } from '../inputbox/inputbox.service';
 import { WordCountService } from './word-count.service';
 import { WordCount } from './word-count.model';
 import { NumberSuffixPipe } from './number-suffix.pipe';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'word-count',
@@ -18,9 +19,13 @@ export class WordCountComponent {
   type = 'doughnut';
   piechartLabels = ['Characters Remaining', 'Max Characters (280)'];
   piechartData: number[];
+  isBrowser: boolean;
 
   constructor(private service: WordCountService, 
-      private inputService: InputboxService) {}
+      private inputService: InputboxService, 
+      @Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit() : void {
     this.inputService.getData().subscribe((data => {

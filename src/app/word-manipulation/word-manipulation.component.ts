@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { InputboxService } from '../inputbox/inputbox.service';
 import { WordManipulationService } from './word-manipulation.service';
+import { MetaService } from 'ng2-meta';
 
 @Component({
   selector: 'word-manipulation',
@@ -9,12 +10,12 @@ import { WordManipulationService } from './word-manipulation.service';
   styleUrls: ['./word-manipulation.component.css'],
   providers: [WordManipulationService]
 })
-export class WordManipulationComponent {
+export class WordManipulationComponent implements OnInit {
   userInput: string;
   manipulatedText: string = "";
 
   constructor(private service: WordManipulationService,
-      private inputService: InputboxService) {}
+      private inputService: InputboxService, private _metaService: MetaService) {}
 
   getLowerCase() {
     this.manipulatedText = this.service.getLowerCase(this.userInput);

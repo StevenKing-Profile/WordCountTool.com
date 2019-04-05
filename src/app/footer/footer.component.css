@@ -1,5 +1,4 @@
 #copyright {
-  position: fixed;
   bottom: 0px;
   width: 100%;
   background-color: #DCDCDC;
@@ -8,6 +7,9 @@
 }
 
 section {
-  text-align: center;
   margin: auto;
+}
+
+span {
+  white-space:nowrap !important;
 }

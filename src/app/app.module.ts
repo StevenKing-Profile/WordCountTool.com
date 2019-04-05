@@ -5,9 +5,8 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AdsenseModule } from 'ng2-adsense';
-import { AppRoutingModule } from './app-routing.module';
 import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
@@ -20,11 +19,23 @@ import { WordManipulationComponent } from './word-manipulation/word-manipulation
 import { GetValuesPipe } from './get-values.pipe';
 import { NumberSuffixPipe } from './word-count/number-suffix.pipe'
 import { FooterComponent } from './footer/footer.component';
-import { SeoService } from './seo-service'
+import { MetaModule } from 'ng2-meta';
+import { routes, AppRoutingModule } from './app-routing.module';
+import { MetaConfig, MetaService } from 'ng2-meta';
+
+const metaConfig: MetaConfig = {
+  useTitleSuffix: true,   //Append a title suffix such as a site name to all titles
+  defaults: {
+    title: 'Word Counter',
+    titleSuffix: ' | Word Count Tool',
+    description: 'Word Count Tool offers a word counter and more to help you write.',
+    'og:description': 'Word Count Tool offers a word counter and more to help you write',
+  }
+};
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
     WordCountComponent,
     WordFrequencyComponent,
     WordManipulationComponent,
@@ -32,7 +43,7 @@ import { SeoService } from './seo-service'
     GetValuesPipe,
     NumberSuffixPipe,
     InputboxComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
   ],
   imports:[
     CommonModule,
@@ -41,19 +52,17 @@ import { SeoService } from './seo-service'
     HttpClientModule,
     FormsModule,
     AdsenseModule.forRoot({adClient: 'ca-pub-8270924858996787', adSlot: 2947619746,}),
-    AppRoutingModule,
     BrowserModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule.forRoot(routes),
+    MetaModule.forRoot(metaConfig),
+    AppRoutingModule
   ],
   providers: [
     InputboxService,
-    SeoService
   ],
   exports: [
     InputboxComponent
   ]
 })
-export class AppModule { 
-  
-  constructor (router: Router) {}
-}
+export class AppModule { }

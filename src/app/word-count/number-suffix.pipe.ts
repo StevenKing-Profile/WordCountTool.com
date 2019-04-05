@@ -1,6 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'; 
-import { HttpModule } from '@angular/http';
 
 @Pipe({ name: 'numberSuffix' })
 export class NumberSuffixPipe implements PipeTransform {
