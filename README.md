@@ -13,7 +13,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 $ npm install   
 $ npm run build:prod  
-$ npm run server
+$ npm run server 
+ 
+screen -r 
+ctrl + c to kill
 
 ## Running unit tests
 
