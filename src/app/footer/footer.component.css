@@ -4,6 +4,7 @@
   background-color: #DCDCDC;
   display: flex;
   margin: auto;
+  text-align: center;
 }
 
 section {
@@ -12,4 +13,10 @@ section {
 
 span {
   white-space:nowrap !important;
+}
+
+@media screen and (min-width: 1024px) {
+  #copyright {
+    position: fixed;
+  }
 }
