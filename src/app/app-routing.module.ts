@@ -17,7 +17,7 @@ export const routes: Routes = [
     data: {
       meta: {
         title: 'Word Counter',
-        description: 'Counts the total number of words in text and input',
+        description: 'Word Count Tool offers a word counter and more to help you write.',
         'og:title': 'Word Counter',
       }
     }
@@ -29,7 +29,7 @@ export const routes: Routes = [
     data: {
       meta: {
         title: 'Word Frequency',
-        description: 'Counts the number of times a specific word occurs in text and input',
+        description: 'Our word frequency tool counts the number of times a specific word occurs in text and input.',
         'og-title': 'Word Frequency',
       }
     }
@@ -41,7 +41,7 @@ export const routes: Routes = [
     data: {
       meta: {
         title: 'Word Manipulation',
-        description: 'A tool that changes words and input to uppercase, lowercase, and spongecase',
+        description: 'Our word manipulation tool changes words and input to uppercase, lowercase, and spongecase.',
         'og:title': 'Word Manipulation',
       }
     }
@@ -52,7 +52,7 @@ export const routes: Routes = [
     canActivate: [MetaGuard],
     data: {
       title: 'Privacy Policy',
-      description: 'Information regarding our policies for collection, use, and disclosure of personal data',
+      description: 'Information regarding our policies for collection, use, and disclosure of personal data.',
       'og:title': 'Privacy Policy',
     } 
   },
