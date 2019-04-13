@@ -15,7 +15,7 @@ span {
   white-space:nowrap !important;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1600px) {
   #copyright {
     position: fixed;
   }
