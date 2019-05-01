@@ -4,6 +4,9 @@
 
 #word-length-table {
   font-size: 12px;
+  display: block;
+  height: 99%;
+  overflow-y: scroll;
 }
 
 .large-column {

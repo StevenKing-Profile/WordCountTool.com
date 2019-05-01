@@ -1,22 +1,17 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-5">
-      <div class="row">
-        <div class="col-md-12">
-          <a href="https://shareasale.com/r.cfm?b=822435&u=1783322&m=26748&urllink=&afftrack=" target="_blank">
-            <img src="assets/grammarly.png" alt="Grammarly" style="width:100%; height:auto">
-          </a>
-        </div>
-        <div class="col-md-12">
-          <textarea id="text-input" class="form-control" rows="30" placeholder="Insert text here"
-              [(ngModel)]="data" 
-              (ngModelChange)="calculate($event)" ></textarea>
-          </div>
-        </div>
+    <div class="col-lg-5 col-md-12">
+      <div class="col-12">
+        <a href="https://shareasale.com/r.cfm?b=822435&u=1783322&m=26748&urllink=&afftrack=" target="_blank">
+          <img src="assets/grammarly.png" alt="Grammarly" style="width:100%; height:auto; min-height: 75px;"></a>
+      </div>
+
+      <textarea id="text-input" class="form-control" placeholder="Insert text here" [(ngModel)]="data"
+          (ngModelChange)="calculate($event)"></textarea>
     </div>
 
-    <div class="col-md-7">
+    <div class="col-lg-7 col-md-12">
       <router-outlet></router-outlet>
-    </div>  
+    </div>
   </div>
 </div>

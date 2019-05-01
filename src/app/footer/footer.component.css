@@ -1,8 +1,17 @@
-#copyright {
+footer {
   width: 100%;
-  position: absolute;
+  bottom: 0;
+  height: 2rem;
   background-color: #DCDCDC;
+}
+
+#copyright {
+  height: 100%;
   text-align: center;
+}
+
+.copyright-detail {
+  vertical-align: middle;
 }
 
 section {
@@ -13,8 +22,8 @@ span {
   white-space:nowrap !important;
 }
 
-@media screen and (min-width: 1023px) {
+/* @media screen and (min-width: 1023px) {
   #copyright {
     bottom: 0;
   }
-}
+} */
