@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { MetaGuard } from 'ng2-meta';
 
-import { WordFrequencyComponent } from './word-freq/word-freq.component';
+import { WordFrequencyComponent } from './word-frequency/frequency.component';
 import { WordCountComponent } from './word-count/word-count.component';
 import { WordManipulationComponent } from './word-manipulation/word-manipulation.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';

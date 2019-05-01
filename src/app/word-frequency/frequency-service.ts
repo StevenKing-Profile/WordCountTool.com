@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { WordFrequency } from './word-freq.model';
+import { WordFrequency } from './frequency.model';
 
 @Injectable({
   providedIn: 'root'

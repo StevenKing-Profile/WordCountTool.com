@@ -17,7 +17,7 @@ import { ChartsModule } from 'ng2-charts';
 import { MetaModule } from 'ng2-meta';
 import { MetaConfig, MetaService } from 'ng2-meta';
 import { WordCountComponent } from './word-count/word-count.component';
-import { WordFrequencyComponent } from './word-freq/word-freq.component';
+import { WordFrequencyComponent } from './word-frequency/frequency.component';
 import { WordManipulationComponent } from './word-manipulation/word-manipulation.component';
 import { FooterComponent } from './footer/footer.component';
 import { GetValuesPipe } from './get-values.pipe';
