@@ -1,35 +1,40 @@
-<nav class="navbar navbar-expand-lg">
-    <h5><a class="navbar-brand" href="#">{{ title }}</a></h5>
+<div class="container-fluid" style="height: 100%; width: 100%">
+  <div class="row" style="height: inherit;">
+    <nav class="navbar navbar-expand-lg" style="width: 100%; height: 70px;">
+        <h5><a class="navbar-brand" href="#">{{ title }}</a></h5>
 
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
-        data-target=".navbar-collapse" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon my-toggler"></span>
-    </button>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
+            data-target=".navbar-collapse" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon my-toggler"></span>
+        </button>
 
-    <div class="collapse navbar-collapse show">
-      <ul class="mr-auto navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="" routerLinkActive="active">Word Counter</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/frequency" routerLinkActive="active">Word Frequency</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/manipulation" routerLinkActive="active">Word Manipulation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://blog.wordcounttool.com" target="_blank">Blog</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/privacy" routerLinkActive="active">Privacy Policy</a>
-        </li>
-      </ul>
+        <div class="collapse navbar-collapse show">
+          <ul class="mr-auto navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="" routerLinkActive="active">Word Counter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/frequency" routerLinkActive="active">Word Frequency</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/manipulation" routerLinkActive="active">Word Manipulation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.wordcounttool.com" target="_blank">Blog</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/privacy" routerLinkActive="active">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div style="height: calc(97% - 70px); width: 100%">
+      <router-outlet></router-outlet>
     </div>
 
-</nav>
-
-<router-outlet></router-outlet>
-
-<app-footer></app-footer>
+    <app-footer style="height: 3%; width: 100%;"></app-footer>
+  </div>
+</div>

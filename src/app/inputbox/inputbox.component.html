@@ -1,16 +1,16 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-5 col-md-12">
+<div class="container-fluid" style="height: 100%">
+  <div class="row" style="height: 100%">
+    <div id="inputbox-wrapper" class="col-md-5 col-sm-12" style="height: inherit">
       <div class="col-12">
         <a href="https://shareasale.com/r.cfm?b=822435&u=1783322&m=26748&urllink=&afftrack=" target="_blank">
-          <img src="assets/grammarly.png" alt="Grammarly" style="width:100%; height:auto; min-height: 75px;"></a>
+          <img src="assets/grammarly.png" alt="Grammarly" style="width:100%; height:10%;"></a>
       </div>
 
       <textarea id="text-input" class="form-control" placeholder="Insert text here" [(ngModel)]="data"
           (ngModelChange)="calculate($event)"></textarea>
     </div>
 
-    <div class="col-lg-7 col-md-12">
+    <div class="col-md-7 col-sm-12" style="height: inherit">
       <router-outlet></router-outlet>
     </div>
   </div>

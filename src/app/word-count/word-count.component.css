@@ -2,11 +2,12 @@
   font-size: 20px;
 }
 
-#word-length-table {
-  font-size: 12px;
-  display: block;
-  height: 99%;
-  overflow-y: scroll;
+#table-wrapper {
+  position:relative;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  display:block;
 }
 
 .large-column {
@@ -17,20 +18,17 @@
   width: 40%;
 }
 
+#word-length-table {
+  font-size: .75rem;
+  word-break: inherit;
+}
+
 #chart-div {
   margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 768px) { /* medium */
-  #chart-div {}
-
-  #results-table {
-    font-size: 16px;
-  }
-
   #word-length-table {
-    font-size: 12px;
-    word-break: inherit;
     padding: 0px;
   }
 }
@@ -49,16 +47,21 @@
   }
 }
 
-@media screen and (min-width: 1024px) { /* medium */
+@media screen and (max-width: 1024px) { /* medium */
   #chart-div {
     background: transparent url("/assets/Twitter_Logo_Blue.png") no-repeat center 80%;
     background-size: 20% 35%;
   }
+
 }
 
 @media screen and (min-width: 1350px) { /* medium */
   #chart-div {
     background: transparent url("/assets/Twitter_Logo_Blue.png") no-repeat center 60%;
     background-size: 20% 40%;
+  }
+
+  #table-div {
+    height: inherit;
   }
 }

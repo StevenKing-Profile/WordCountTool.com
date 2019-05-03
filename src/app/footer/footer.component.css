@@ -1,8 +1,8 @@
 footer {
   width: 100%;
   bottom: 0;
-  height: 2rem;
   background-color: #DCDCDC;
+  position: absolute;
 }
 
 #copyright {
@@ -19,11 +19,11 @@ section {
 }
 
 span {
-  white-space:nowrap !important;
+  white-space: nowrap !important;
 }
 
-/* @media screen and (min-width: 1023px) {
-  #copyright {
-    bottom: 0;
+@media screen and (max-width: 1919px) {
+  footer {
+    display: none;
   }
-} */
+}

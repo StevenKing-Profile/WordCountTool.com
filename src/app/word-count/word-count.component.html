@@ -1,208 +1,215 @@
-<div class="container-fluid" style="height: 100%">
-  <div class="row">
+<div class="container-fluid" style="height: 100%;">
+  <div class="row" style="height: inherit">
     <div class="col-xl-6 col-lg-12">
       <div class="container-fluid">
         <div class="row">
-          <div class="jumbotron">
-            <h1 class="display-6">Results:</h1>
-            <hr class="my-3">
+          <div class="col-12">
+            <div class="jumbotron">
+              <h1 class="display-6">Results:</h1>
+              <hr class="my-3">
+              <table class="table table-sm" id="results-table">
+                <tbody>
+                  <tr [ngClass]="wordCount?.words ? 'table-primary' : ''">
+                    <td class="large-column">Words:</td>
+                    <td class="short-column">{{ wordCount?.words }}</td>
+                  </tr>
+                  <tr>
+                    <td class="large-column">Unique Words:</td>
+                    <td class="short-column">{{ wordCount?.unique_words }}</td>
+                  </tr>
+                  <tr>
+                    <td class="large-column">Characters:</td>
+                    <td class="short-column">{{ wordCount?.characters }}</td>
+                  </tr>
+                  <tr>
+                    <td class="large-column">Characters per word:</td>
+                    <td class="short-column">{{ wordCount?.characters_p_word | number : '1.2-2' }}</td>
+                  </tr>
+                  <tr>
+                    <td class="large-column">Sentences:</td>
+                    <td class="short-column">{{ wordCount?.sentences }}</td>
+                  </tr>
+                  <tr>
+                    <td class="large-column">Readability:</td>
+                    <td class="short-column" *ngIf="wordCount.readability == null">-</td>
+                    <td class="short-column" *ngIf="wordCount?.readability != null">{{ wordCount?.readability }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <br />
 
-            <table class="table table-sm" id="results-table">
-              <tbody>
-                <tr [ngClass]="wordCount?.words ? 'table-primary' : ''">
-                  <td class="large-column">Words:</td>
-                  <td class="short-column">{{ wordCount?.words }}</td>
-                </tr>
-                <tr>
-                  <td class="large-column">Unique Words:</td>
-                  <td class="short-column">{{ wordCount?.unique_words }}</td>
-                </tr>
-                <tr>
-                  <td class="large-column">Characters:</td>
-                  <td class="short-column">{{ wordCount?.characters }}</td>
-                </tr>
-                <tr>
-                  <td class="large-column">Characters per word:</td>
-                  <td class="short-column">{{ wordCount?.characters_p_word | number : '1.2-2' }}</td>
-                </tr>
-                <tr>
-                  <td class="large-column">Sentences:</td>
-                  <td class="short-column">{{ wordCount?.sentences }}</td>
-                </tr>
-                <tr>
-                  <td class="large-column">Readability:</td>
-                  <td class="short-column" *ngIf="wordCount.readability == null">-</td>
-                  <td class="short-column" *ngIf="wordCount?.readability != null">{{ wordCount?.readability }}</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="col-12">
+            <div class="center" id="chart-div" style="display: block" *ngIf="isBrowser">
+              <canvas baseChart [data]="piechartData" [labels]="piechartLabels" [chartType]="type"></canvas>
+            </div>
           </div>
         </div>
       </div>
-
-      <br />
-      <div class="center" id="chart-div" style="display: block" *ngIf="isBrowser">
-        <canvas baseChart [data]="piechartData" [labels]="piechartLabels" [chartType]="type"></canvas>
-      </div>
     </div>
 
-    <div class="col-xl-6 col-lg-12">
-      <table class="table table-hover" id="word-length-table">
-        <thead>
-          <tr>
-            <th>Word Count</th>
-            <th>Pages (single spaced)</th>
-            <th>Pages (double spaced)</th>
-            <th>Font Size</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              250 <span>Words</span>
-            </td>
-            <td>½ <span>Page</span></td>
-            <td>1 <span>Page</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              300 <span>Words</span>
-            </td>
-            <td>⅔ <span>Page</span></td>
-            <td>1⅓ <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              400 <span>Words</span>
-            </td>
-            <td>⅘ <span>Page</span></td>
-            <td>1⅗ <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              500 <span>Words</span>
-            </td>
-            <td>1 <span>Page</span></td>
-            <td>2 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              600 <span>Words</span>
-            </td>
-            <td>1⅓ <span>Page</span></td>
-            <td>2⅔ <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              750 <span>Words</span>
-            </td>
-            <td>1½ <span>Pages</span></td>
-            <td>3 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              800 <span>Words</span>
-            </td>
-            <td>1⅗ <span>Pages</span></td>
-            <td>3⅕ <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              1000 <span>Words</span>
-            </td>
-            <td>2 <span>Pages</span></td>
-            <td>4 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              1200 <span>Words</span>
-            </td>
-            <td>2⅖ <span>Pages</span></td>
-            <td>4⅘ <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              1500 <span>Words</span>
-            </td>
-            <td>3 <span>Pages</span></td>
-            <td>6 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              2000 <span>Words</span>
-            </td>
-            <td>4 <span>Pages</span></td>
-            <td>8 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              2500 <span>Words</span>
-            </td>
-            <td>5 <span>Pages</span></td>
-            <td>10 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              3000 <span>Words</span>
-            </td>
-            <td>6 <span>Pages</span></td>
-            <td>12 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              3500 <span>Words</span>
-            </td>
-            <td>7 <span>Pages</span></td>
-            <td>14 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              4000 <span>Words</span>
-            </td>
-            <td>8 <span>Pages</span></td>
-            <td>16 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              5000 <span>Words</span>
-            </td>
-            <td>10 <span>Pages</span></td>
-            <td>20 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              6000 <span>Words</span>
-            </td>
-            <td>12 <span>Pages</span></td>
-            <td>24 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-          <tr>
-            <td>
-              7500 <span>Words</span>
-            </td>
-            <td>15 <span>Pages</span></td>
-            <td>30 <span>Pages</span></td>
-            <td>12 <span>Point</span></td>
-          </tr>
-        </tbody>
-      </table>
+    <div id="table-div" class="col-xl-6 col-lg-12">
+      <div id="table-wrapper">
+        <div id="table-scroll">
+          <table class="table table-hover" id="word-length-table">
+            <thead>
+              <tr>
+                <th>Word Count</th>
+                <th>Pages (single spaced)</th>
+                <th>Pages (double spaced)</th>
+                <th>Font Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  250 <span>Words</span>
+                </td>
+                <td>½ <span>Page</span></td>
+                <td>1 <span>Page</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  300 <span>Words</span>
+                </td>
+                <td>⅔ <span>Page</span></td>
+                <td>1⅓ <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  400 <span>Words</span>
+                </td>
+                <td>⅘ <span>Page</span></td>
+                <td>1⅗ <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  500 <span>Words</span>
+                </td>
+                <td>1 <span>Page</span></td>
+                <td>2 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  600 <span>Words</span>
+                </td>
+                <td>1⅓ <span>Page</span></td>
+                <td>2⅔ <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  750 <span>Words</span>
+                </td>
+                <td>1½ <span>Pages</span></td>
+                <td>3 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  800 <span>Words</span>
+                </td>
+                <td>1⅗ <span>Pages</span></td>
+                <td>3⅕ <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  1000 <span>Words</span>
+                </td>
+                <td>2 <span>Pages</span></td>
+                <td>4 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  1200 <span>Words</span>
+                </td>
+                <td>2⅖ <span>Pages</span></td>
+                <td>4⅘ <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  1500 <span>Words</span>
+                </td>
+                <td>3 <span>Pages</span></td>
+                <td>6 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  2000 <span>Words</span>
+                </td>
+                <td>4 <span>Pages</span></td>
+                <td>8 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  2500 <span>Words</span>
+                </td>
+                <td>5 <span>Pages</span></td>
+                <td>10 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  3000 <span>Words</span>
+                </td>
+                <td>6 <span>Pages</span></td>
+                <td>12 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  3500 <span>Words</span>
+                </td>
+                <td>7 <span>Pages</span></td>
+                <td>14 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  4000 <span>Words</span>
+                </td>
+                <td>8 <span>Pages</span></td>
+                <td>16 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  5000 <span>Words</span>
+                </td>
+                <td>10 <span>Pages</span></td>
+                <td>20 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  6000 <span>Words</span>
+                </td>
+                <td>12 <span>Pages</span></td>
+                <td>24 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+              <tr>
+                <td>
+                  7500 <span>Words</span>
+                </td>
+                <td>15 <span>Pages</span></td>
+                <td>30 <span>Pages</span></td>
+                <td>12 <span>Point</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>

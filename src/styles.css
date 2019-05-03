@@ -1,5 +1,14 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 table {
     word-break: break-word;
     table-layout: fixed ;
@@ -11,7 +20,7 @@ table {
   }
 
 .large-jumbotron {
-    height: 837px !important;
+    margin-bottom: 0px !important;
 }
 
 textarea {

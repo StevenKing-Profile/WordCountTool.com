@@ -1,13 +1,12 @@
 #text-input {
-  height: calc(100% - 100px);
-  min-height: 450px;
+  height: 89%;
   width: 100%;
   overflow: hidden;
   padding: 10px;
 }
 
 @media screen and (max-width: 767px) {
-  #text-input {
-    height: 500px;
+  #inputbox-wrapper {
+    height: 500px !important;
   }
 }

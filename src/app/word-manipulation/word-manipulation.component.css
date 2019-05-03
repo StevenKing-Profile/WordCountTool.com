@@ -14,7 +14,6 @@ span {
 
 .jumbotron-text-parent-div {
   overflow-y: auto; 
-  height: 650px;
 }
 
 @media screen and (min-width: 1025px) {
